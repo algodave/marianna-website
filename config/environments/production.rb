@@ -18,7 +18,7 @@ Rails.application.configure do
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
   # NGINX, varnish or squid.
-  # config.action_dispatch.rack_cache = true
+  config.action_dispatch.rack_cache = true
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
@@ -55,7 +55,21 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :dalli_store
+  client = Dalli::Client.new(
+    (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+    :username => ENV["MEMCACHIER_USERNAME"],
+    :password => ENV["MEMCACHIER_PASSWORD"],
+    :failover => true,
+    :socket_timeout => 1.5,
+    :socket_failure_delay => 0.2,
+    :value_max_bytes => 10485760
+  )
+  config.action_dispatch.rack_cache = {
+    :metastore    => client,
+    :entitystore  => client
+  }
+  config.static_cache_control = "public, max-age=311040000"
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -76,4 +90,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Make S3 info accessible to Rails configuration
+  config.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
+  config.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+  config.aws_region = ENV['AWS_REGION']
+  config.aws_pictures_directory = ENV['AWS_PICTURES_DIRECTORY']
+  config.aws_attachments_directory = ENV['AWS_ATTACHMENTS_DIRECTORY']
+
 end
