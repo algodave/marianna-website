@@ -16,3 +16,17 @@
 @import 'bootstrap/variables';
 @import "bootstrap";
 
+// Common Styles
+@import 'colors';
+@import 'fonts';
+@import 'typography';
+@import 'buttons';
+@import 'basic';
+@import 'blocks';
+@import 'misc';
+
+// Features Styles
+
+
+// Media Queries
+@import 'mediaquery';
