@@ -1,0 +1,13 @@
+<%= element_editor_for(element) do |el| -%>
+  <%= el.edit :period %>
+  <%= el.edit :icon %>
+  <p class="small">
+    Click
+    <a href="http://fontawesome.io/icons" target="_blank">here</a>
+    to see available icons
+  </p>
+  <%= el.edit :picture, crop: true, fixed_ratio: false %>
+  <%= el.edit :title %>
+  <%= el.edit :subtitle %>
+  <%= el.edit :description %>
+<%- end -%>

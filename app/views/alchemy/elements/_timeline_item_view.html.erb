@@ -1,0 +1,32 @@
+<%- cache(element) do -%>
+  <%= element_view_for(element, tag: "li") do |el| -%>
+    <div class="timeline-badge primary">
+      <i class="timeline-icon fa fa-<%= el.render :icon %>"></i>
+    </div>
+    <div class="timeline-panel">
+       <p class="timeline-time fontcolor-invert">
+         <i class="glyphicon glyphicon-time"></i>
+         <%= el.render :period %>
+       </p>
+       <div class="timeline-photo timeline-bg"
+            style="background: url(<%= el.essence(:picture).picture_url %>);
+                   background-position: center;
+                   background-size: cover;">
+       </div>
+       <div class="timeline-heading">
+          <h3 class="font-accident-two-bold uppercase">
+            <%= el.render :title %>
+          </h3>
+          <h6 class="uppercase">
+            <%= el.render :subtitle %>
+          </h6>
+       </div>
+       <div class="dividewhite1"></div>
+       <div class="timeline-body">
+          <p class="small">
+            <%= el.render :description %>
+          </p>
+       </div>
+    </div>
+  <%- end -%>
+<%- end -%>

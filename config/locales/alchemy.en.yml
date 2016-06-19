@@ -9,6 +9,7 @@ en:
     element_names:
       article: Article
       heading: Heading
+      timeline_item: 'Timeline Item'
 
     # Translations for content names
     content_names:
@@ -23,6 +24,10 @@ en:
       heading_title: 'Heading Title'
       heading_subtitle: 'Heading Subtitle'
       heading_summary: 'Heading Summary'
+      timeline_item_period: 'Aug 2010 - Nov 2012'
+      timeline_item_title: 'Boynton Health Service'
+      timeline_item_subtitle: 'Paediatric dental practitioner'
+      timeline_item_description: 'Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.'
 
     # Hint texts for elements
     element_hints:

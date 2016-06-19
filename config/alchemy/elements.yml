@@ -30,3 +30,23 @@
   - name: summary
     type: EssenceRichtext
     default: :heading_summary
+
+- name: timeline_item
+  contents:
+  - name: period
+    type: EssenceText
+    default: :timeline_item_period
+  - name: icon
+    type: EssenceText
+    default: 'graduation-cap'
+  - name: picture
+    type: EssencePicture
+  - name: title
+    type: EssenceText
+    default: :timeline_item_title
+  - name: subtitle
+    type: EssenceText
+    default: :timeline_item_subtitle
+  - name: description
+    type: EssenceRichtext
+    default: :timeline_item_description
