@@ -6,3 +6,8 @@
   unique: true
   elements: [heading]
   autogenerate: [heading]
+
+- name: experiences
+  unique: false
+  elements: [heading, timeline_item]
+  autogenerate: [heading, timeline_item]
