@@ -17,3 +17,16 @@
     type: EssenceRichtext
     default: :article_text
     hint: true
+
+- name: heading
+  hint: true
+  contents:
+  - name: title
+    type: EssenceText
+    default: :heading_title
+  - name: subtitle
+    type: EssenceText
+    default: :heading_subtitle
+  - name: summary
+    type: EssenceRichtext
+    default: :heading_summary

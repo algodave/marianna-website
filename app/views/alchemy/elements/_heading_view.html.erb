@@ -1,0 +1,14 @@
+<%- cache(element) do -%>
+  <%= element_view_for(element, class: "text-center") do |el| -%>
+    <h3 class="font-accident-one-bold accent-color uppercase">
+      <%= el.render :title %>
+    </h3>
+    <h5 class="font-accident-one-bold uppercase hovercolor">
+      <%= el.render :subtitle %>
+    </h5>
+    <div class="dividewhite1"></div>
+    <p class="small color08">
+      <%= el.render :summary %>
+    </p>
+  <%- end -%>
+<%- end -%>
