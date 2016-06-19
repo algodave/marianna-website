@@ -96,11 +96,16 @@ GEM
     airbrussh (1.0.1)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (6.0.3)
+    autoprefixer-rails (6.3.6.1)
+      execjs
     awesome_nested_set (3.0.3)
       activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.5)
     cancancan (1.13.1)
@@ -178,6 +183,8 @@ GEM
     fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-sass (4.6.2)
+      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -321,11 +328,13 @@ PLATFORMS
 DEPENDENCIES
   alchemy-devise!
   alchemy_cms!
+  bootstrap-sass (~> 3.3)
   byebug
   capistrano-alchemy!
   coffee-rails (~> 4.1.0)
   dalli
   dragonfly-s3_data_store
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   kgio
