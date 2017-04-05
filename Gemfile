@@ -50,9 +50,8 @@ group :development do
 end
 
 
-gem 'alchemy_cms', github: 'AlchemyCMS/alchemy_cms', branch: '3.2-stable'
-gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '3.2-stable'
-gem 'capistrano-alchemy', github: 'AlchemyCMS/capistrano-alchemy', branch: 'master', group: 'development'
+gem 'alchemy_cms', github: 'AlchemyCMS/alchemy_cms', branch: '3.4-stable'
+gem 'alchemy-devise', github: 'AlchemyCMS/alchemy-devise', branch: '3.4-stable'
 
 group :production do
   gem 'pg'
